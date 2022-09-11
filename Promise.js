@@ -1,4 +1,4 @@
-const hasmeeting = true;
+const hasmeeting = false;
 
 const meeting = new Promise((resolve, reject) => {
   // do some stuff
@@ -14,7 +14,15 @@ const meeting = new Promise((resolve, reject) => {
   }
 });
 
+const addToCalander = (meetingDetails) => {
+    return new Promise((resolve, reject) => {
+        const calander = `${meetingDetails.name} will start ${meetingDetails.location} at ${meetingDetails.time}`;
+        return resolve(calander)
+    })
+}
+
 meeting
+ .then(addToCalander)
  .then((res) => {
     // resolve
     // console.log(JSON.stringify(res))
@@ -25,3 +33,5 @@ meeting
     // rejected
     console.log(err.message);
  })
+
+ console.log("Hello Banladesh")
