@@ -17,10 +17,11 @@ const completeOrder = (customer) => {
     console.log(`Completed Order For ${customer}`)
 };
 
-takeOrder("Customer 1" ,(customer) => {
-    processOrder(customer, (customer) => {
-        completeOrder(customer)
-    })
-});
+// takeOrder("Customer 1" ,(customer) => {
+//     processOrder(customer, (customer) => {
+//         completeOrder(customer)
+//     })
+// });
 
-console.log("Hello Bangladesh")
+// async and await more info
+
